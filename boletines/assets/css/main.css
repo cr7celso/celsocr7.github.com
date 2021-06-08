@@ -1,0 +1,221 @@
+﻿
+ 
+ .red{
+  height:200px;
+  width:200px;
+  background-color:red;
+        }
+ #boton-pago{
+  background-color:yellow;
+        }
+ 
+ html{
+     font-family: 'Odibee Sans', cursiva;
+ }
+ /*linea de los links*/
+ a{
+     text-decoration:none;   
+         color:red; //color de letra
+ }
+ .class{
+     text-transform:capitalize; //cambiar el titula a mayuscula
+ }
+
+ .container{
+     background: #c04848;
+     background: -webkit-linear-gradient(to right, #c04848, #480048); 
+  background: linear-gradient(to right, #c04848, #480048);
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+ }
+ .content{
+     max-width:960px;
+     width:100%;
+     height:80vh;;
+     background-color:white;
+     box-shadow:0 3px 4px white;
+     border-radius:4px;
+     position:relative;
+     
+     overflow-y:scroll;
+     overflow-x: hidden;
+     overflow:scroll; /* acomoda*/
+ }
+
+ parrafo{
+     line-height:1.8em;
+     font-weight:300; //delgada letra
+ }
+ .fa-star, .fa-star-o{
+     color:yellow;
+ }
+ .table{
+     width:100%;
+     border-spacing: 0;
+ }
+ /*titulo*/
+ .title{
+     text-align:center;
+     text-transform:uppercase;
+ }
+ /*la coma hace adjuntar mas clases con selectores*/
+
+ .table td, .table th{
+   padding: iem;
+   text-align:left;
+ }
+ .table td{
+      padding: 1em;
+   text-align:left;
+ }
+ .table tr:nth-child(even) { background-color: #f3e5f5;
+ }
+
+
+ 
+ /*border de mi titulo*/
+ .titleitem{
+     /*border-bottom-style:solid; 
+     border-width:2px;
+     border-bottom-color:black;
+         */
+     border-bottom:solid 2px black;
+     padding-bottom:1em;
+     padding-top:2em;
+     font-size:2em;
+ }
+
+ /*direccion*/
+ .addres{
+     font-weight:bold;
+     color: black;
+     font-size:1.2em;
+     margin-top:2em;
+     display:inline-block;
+ }
+ /*imagen*/
+ .image{
+     float:left; /*texto fluya ala derecha*/
+     margin-right:1em;
+     width:100%;
+     height:auto;
+ }
+ /*padding arriba derecho abajo izq*/
+ .posicion{
+     color:white;
+     background-color:black;
+     padding: .5em;
+     border-top-left-radius: 2em;
+     border-top-right-radius: 2em;
+     border-bottom-left-radius: 2em;
+     border-bottom-right-radius: 2em;
+     margin-right:0.5em;
+ }
+ /*adaptarse al minimizar la pantalla*/
+  .content{
+         padding:1em;
+     }
+     td{
+         display:block; /*hacemos las filas en ileras y que ocupen d¿todo el ancho del dispositivo*/
+         width:100%;
+     }
+     td:nth-of-type(1){
+          /*seleccionamos la primera seccion de la etiqueta td*/
+         font-size:1.5em;
+         font-weight:bold;
+         color:#00108b;
+     }
+     th{
+         display:none;
+     }
+
+ /*posiciones absolute,relative,fixed */
+ .principal{
+     position:relative;
+     width:800px;
+     height:600px;
+     background:blue;
+ }
+ .h2{
+     background:red;
+     width:200px;
+     height:100px;
+     position:sticky;
+     top: 0;
+     left:200px;
+ }
+ .accion{
+     position:absolute;
+     top:1em;
+     right:1em;
+ }
+ .close{
+     height:40px;
+     width:40px;
+     color:white;
+     border-radius:50%;
+     background-color:black;
+     display:inline-block;
+     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+     font-weight:300;
+     cursor:pointer;
+     display:flex;
+     align-items:center;
+     justify-content:center;
+ }
+
+ /*pseudo clases*/
+ a:hover{
+     opacity:1;
+ }
+ a:active{
+     background:red;
+ }
+ a:focus{
+     color:red;
+ }
+  @media (min-width:900px){
+      th{
+          display:table-cell;
+      }
+      td{
+          width:auto;
+          display:table-cell;
+
+      } 
+      td:nth-of-type(1){
+          font-size:1em;
+      }
+      .content{
+          padding:1.8em;
+      }
+  }
+
+ @media (max-width:600px){
+     .content{
+         padding:1em;
+     }
+     td{
+         display:block; /*hacemos las filas en ileras y que ocupen d¿todo el ancho del dispositivo*/
+         width:100%;
+     }
+     td:nth-of-type(1){
+          /*seleccionamos la primera seccion de la etiqueta td*/
+         font-size:1.5em;
+         font-weight:bold;
+         color:#00108b;
+     }
+     th{
+         display:none;
+     }
+
+ }
+
+  @media (min-heigth:550px){ /*reglas especificas para cuando la pagina va ser impresa*/
+.content{
+    height:500px;
+}
+  }
